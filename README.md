@@ -34,16 +34,25 @@ source: https://docs.greatexpectations.io/docs/
 1. Use 'gsutil' command to copy your data from local to GCS/bucket
 2. Create Dataset on your Big Query
 3. Usw 'bq load' command to load your data from GCS to Big Query table
-4. Detail are in \
+4. Details are in \script directory
 
 ## Using Great Expecation
 1. Adding New Datasource
-   · Start the GE (
-   · airflow scheduler <br />
-   · airflow webserver -p 8080 <br />
-   
+   · Start the GE using --v3-api (great_expectations --v3-api init) <br />
+   · Add new datasource (great_expectations --v3-api datasource new) <br />
+   · Choose your data source type <br />
+   · A jupyter notebook will appear, then setting your fata source connection by using the notebook <br />
+   · The data source connection will be saved if you follow the procedure written on the notebook, after that you can close the notbeek <br />
+   · You can see greeat_expectation.yml to check whether the data source is saved or not.  
+  
 2. Create Expectation
-
+   · Create new expectation (great_expectations --v3-api suite new) <br />
+   · Choose using interactive batch data option (number 2) and select the data source <br />
+   · A jupyter notebook will appear, then follow the instruction to create expectation (consist of validator.expect_table... and validator.expect_column...) <br />
+   · The expectation will be saved if you follow the procedure written on the notebook, after that you can close the notbeek <br />
+   · You can see expectation folder to check whether the expectation is saved or not.  
+   
+   
 3. Create Checkpoint
 
 4. Creae Doccumentation
