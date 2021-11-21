@@ -1,0 +1,72 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "ge_stores",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "value": 5
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column_list": [
+          "Store_ID",
+          "Store_Name",
+          "Store_City",
+          "Store_Location",
+          "Store_Open_Date"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Store_Location",
+        "value_set": [
+          "Residential",
+          "Commercial",
+          "Downtown",
+          "Airport"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Store_Open_Date",
+        "regex": "^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_definition": null,
+        "batch_kwargs": null,
+        "batch_markers": null,
+        "batch_parameters": null,
+        "batch_request": {
+          "data_asset_name": "stores",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "bq_datasource",
+          "limit": 1000
+        },
+        "batch_spec": null,
+        "citation_date": "2021-11-19T15:12:40.647001Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.13.20"
+  }
+}

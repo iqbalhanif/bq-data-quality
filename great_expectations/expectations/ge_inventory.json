@@ -1,0 +1,68 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "ge_inventory",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "value": 3
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column_list": [
+          "Store_ID",
+          "Product_ID",
+          "Stock_On_Hand"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Stock_On_Hand"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_match_regex_list",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "Stock_On_Hand",
+        "regex_list": [
+          "\\-",
+          "\\.",
+          "[1-9]\\d{5}\\d*|[2-9]\\d{4}|[1-9][0-9]{3}[1-9]|[1-9][0-9]{2}[1-9]\\d{1}|[1-9][0-9]{1}[1-9]\\d{2}|[1-9][1-9]\\d{3}"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_definition": null,
+        "batch_kwargs": null,
+        "batch_markers": null,
+        "batch_parameters": null,
+        "batch_request": {
+          "data_asset_name": "inventory",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "bq_datasource",
+          "limit": 1000
+        },
+        "batch_spec": null,
+        "citation_date": "2021-11-19T06:46:58.701823Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.13.20"
+  }
+}
