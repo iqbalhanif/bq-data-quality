@@ -1,1 +1,1 @@
-# bq-data-quality
+# Data Quality Checking with Great Expectatin (Big Query)
