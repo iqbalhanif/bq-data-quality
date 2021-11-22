@@ -50,7 +50,7 @@ source: https://docs.greatexpectations.io/docs/
    · Choose using interactive batch data option (number 2) and select the data source. <br />
    · A jupyter notebook will appear, then follow the instruction to create expectation (consist of validator.expect_table... and validator.expect_column...). <br />
    · The expectation will be saved if you follow the procedure written on the notebook, after that you can close the notebook. <br />
-   · You can see expectation folder to check whether the expectation is saved or not (ls great_expectations/expectations). <br />  
+   · You can see expectation folder to check whether the expectation is saved or not (ls great_expectations/expectations). <br />
    · You can also edit your existing expectation (great_expectations --v3-api suite edit expectation_name).
 
 ![image](https://user-images.githubusercontent.com/18484807/142793554-67e87363-b250-4759-8f73-6166cc8f448a.png)
